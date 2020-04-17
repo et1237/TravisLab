@@ -15,7 +15,6 @@
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
-                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -48,7 +47,7 @@
         <antcall target="build"/>
     </target>
     <target name="HelloWorld">
-        <java classname="HelloWorld" failonerror="true" fork="yes">
+        <java classname="Logic.HelloWorld" failonerror="true" fork="yes">
             <classpath refid="TravisLab.classpath"/>
         </java>
     </target>
